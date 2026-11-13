@@ -3,7 +3,8 @@ import { getStore } from "@netlify/blobs";
 export type Influencer={id:string;name:string;slug:string;instagram:string;phone:string;commissionCents:number;active:boolean;createdAt:string};
 export type Event={influencerId:string;kind:"click"|"whatsapp";createdAt:string};
 export type Settings={title:string;location:string;originalPriceCents:number;discountPercent:number;whatsappNumber:string;description:string};
-export const defaults:Settings={title:"Casa à venda",location:"Localização a confirmar",originalPriceCents:0,discountPercent:5,whatsappNumber:"",description:"Um imóvel especial, com condição exclusiva para contatos vindos da nossa rede de influenciadores."};
+export const WHATSAPP_NUMBER="558581496514";
+export const defaults:Settings={title:"Casa à venda",location:"Localização a confirmar",originalPriceCents:0,discountPercent:5,whatsappNumber:WHATSAPP_NUMBER,description:"Um imóvel especial, com condição exclusiva para contatos vindos da nossa rede de influenciadores."};
 const store=()=>getStore("as-braz-campanha");
 async function read<T>(key:string){const value=await store().get(key,{type:"text"});return value?JSON.parse(value) as T:null}
 export async function write(key:string,value:unknown){await store().setJSON(key,value)}

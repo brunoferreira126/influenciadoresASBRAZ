@@ -95,6 +95,9 @@ input:focus,textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px #c89
 .property-wrap { width:min(1100px,calc(100% - 36px)); margin:auto; }
 .property-nav { height:78px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ffffff24; }
 .property-nav img { width:60px; height:60px; object-fit:contain; background:white; border-radius:50%; }
+.property-nav-left { display:flex; align-items:center; gap:16px; }
+.property-back { display:inline-flex; align-items:center; gap:7px; border:1px solid #ffffff38; background:transparent; color:white; padding:9px 12px; border-radius:4px; cursor:pointer; font-weight:700; }
+.property-back:hover { background:#ffffff12; }
 .referred { color:#ddd2ba; font-size:13px; }
 .property-hero { display:grid; grid-template-columns:1fr 1fr; min-height:calc(100vh - 78px); align-items:center; gap:8vw; padding:60px 0; }
 .property-visual { min-height:510px; position:relative; background:linear-gradient(145deg,#d4ad53,#6f4f17); overflow:hidden; }
